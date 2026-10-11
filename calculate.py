@@ -9,6 +9,8 @@ def calculate(operation, a, b):
         if b == 0:
             return "Cannot divide by zero"
         return a / b
+    elif operation == "power":
+        return a ** b
 
 # Example usage
 if __name__ == "__main__":
