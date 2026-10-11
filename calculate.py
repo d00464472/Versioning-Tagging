@@ -19,6 +19,10 @@ def calculate(a, b, operation):
         return {"result": a / b}
     elif operation == "power":
         return {"result": a ** b}
+    elif operation == "modulo":
+        if b == 0:
+            return {"error": "Cannot divide by zero"}
+        return {"result": a % b}
 
 # Example usage
 if __name__ == "__main__":
