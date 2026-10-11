@@ -8,17 +8,17 @@ def calculate(a, b, operation):
         return "Inputs must be numbers"
 
     if operation == 'add':
-        return a + b
+        return {"result": a + b}
     elif operation == 'subtract':
-        return a - b
+        return {"result": a - b}
     elif operation == 'multiply':
-        return a * b
+        return {"result": a * b}
     elif operation == "divide":
         if b == 0:
-            return "Cannot divide by zero"
-        return a / b
+            return {"error": "Cannot divide by zero"}
+        return {"result": a / b}
     elif operation == "power":
-        return a ** b
+        return {"result": a ** b}
 
 # Example usage
 if __name__ == "__main__":
