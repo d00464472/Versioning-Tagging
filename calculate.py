@@ -1,4 +1,9 @@
+import logging
+logging.basicConfig(level=logging.INFO)
+
 def calculate(a, b, operation):
+    logging.info("Calculating %s %s %s", a, operation, b)
+
     if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
         return "Inputs must be numbers"
 
