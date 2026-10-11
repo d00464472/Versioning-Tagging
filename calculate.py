@@ -1,4 +1,5 @@
 import logging
+import math
 logging.basicConfig(level=logging.INFO)
 
 def calculate(a, b, operation):
@@ -23,6 +24,10 @@ def calculate(a, b, operation):
         if b == 0:
             return {"error": "Cannot divide by zero"}
         return {"result": a % b}
+    elif operation == "sqrt":
+        if a < 0:
+            return {"error": "Cannot calculate square root of a negative number"}
+        return {"result": math.sqrt(a)}
 
 # Example usage
 if __name__ == "__main__":
