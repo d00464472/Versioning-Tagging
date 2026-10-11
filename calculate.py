@@ -1,4 +1,7 @@
 def calculate(a, b, operation):
+    if not isinstance(a, (int, float)) or not isinstance(b, (int, float)):
+        return "Inputs must be numbers"
+
     if operation == 'add':
         return a + b
     elif operation == 'subtract':
